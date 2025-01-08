@@ -1,15 +1,15 @@
 import './App.css'
-// import ChartComponent from './components/AGCharts/01-03-2025/MultipleRangeBars'
-// import ChartComponent from "./components/D3Charts/Reworks/01-04-2025/BoxPlot";
-// import ChordChart from "./components/D3Charts/Reworks/01-04-2025/RadialClusterTree";
-import Chart from "./components/D3Charts/Reworks/01-04-2025/CostPerGallon";
+// import ChartComponent from './components/AGCharts/12-26-2024/Nightingale'
+import RadialChart from "./components/D3Charts/Reworks/01-08-2025/RadialChart";
+// import Chart from './components/D3Charts/Reworks/01-07-2025/Collapsibletree'
 import "ag-charts-enterprise"
+// import DigitalMarketingScenarioForAWebsite from './components/Recharts/01-08-2025/DigitalMarketingScenarioForAWebsite'
 
 function App() {
 
   return (
-    <div style={{background:"linear-gradient(120deg, #ff0008, #ff00ae, #ff001e)",width:"100dvw",height:"100dvh"}}>
-      <Chart />
+    <div style={{background:"linear-gradient(120deg, #ff1e00, #00ffe1, #04ff00)",width:"100dvw",height:"100dvh"}}>
+      <RadialChart />
     </div>
   )
 }

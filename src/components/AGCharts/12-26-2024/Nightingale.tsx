@@ -64,8 +64,8 @@ const ChartComponent: React.FC = () => {
     <div
       id="myChart"
       style={{
-        height: "90dvh",
-        width: "90dvw",
+        height: "100dvh",
+        width: "100dvw",
         fontFamily: '"Dancing Script", serif',
         background: "linear-gradient(90deg, #ff9a8b, #ff6a00, #a1c4fd)",
       }}
