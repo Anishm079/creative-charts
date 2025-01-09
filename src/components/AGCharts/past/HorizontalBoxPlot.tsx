@@ -64,6 +64,9 @@ const ChartComponent: React.FC = () => {
       title: {
         text: "HR Analytics",
       },
+      background:{
+        fill:"transparent"
+      },
       subtitle: {
         text: "Salary Distribution by Role",
       },
@@ -120,7 +123,7 @@ const ChartComponent: React.FC = () => {
     AgCharts.create(options);
   }, []);
 
-  return <div id="myChart" style={{ width: "90dvw", height: "90dvh" }}></div>;
+  return <div id="myChart" style={{ width: "100dvw", height: "100dvh", background:"linear-gradient(to right,purple,voilet)" }}></div>;
 };
 
 export default ChartComponent;

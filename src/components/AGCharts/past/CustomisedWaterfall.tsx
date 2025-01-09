@@ -84,6 +84,9 @@ const ChartComponent: React.FC = () => {
       title: {
         text: "FTSE 100 Index",
       },
+      background:{
+        fill:"transparent"
+      },
       subtitle: {
         text: "October (2023)",
       },
@@ -177,7 +180,7 @@ const ChartComponent: React.FC = () => {
     AgCharts.create(options);
   }, []);
 
-  return <div id="myChart" style={{ width: "100dvw", height: "90dvh" }}></div>;
+  return <div id="myChart" style={{ width: "100dvw", height: "100dvh", background:"linear-gradient(to right,#89dbfc, #b167ff)" }}></div>;
 };
 
 export default ChartComponent;

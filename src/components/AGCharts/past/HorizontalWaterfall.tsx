@@ -57,6 +57,9 @@ const ChartComponent: React.FC = () => {
     const options = {
       container: document.getElementById("myChart"),
       data: getData(),
+      background:{
+        fill:"transparent"
+      },
       title: {
         text: "UK Government Budget",
       },
@@ -121,7 +124,7 @@ const ChartComponent: React.FC = () => {
     AgCharts.create(options);
   }, []);
 
-  return <div id="myChart" style={{ width: "90dvw", height: "90dvh" }}></div>;
+  return <div id="myChart" style={{ width: "100dvw", height: "100dvh" }}></div>;
 };
 
 export default ChartComponent;

@@ -404,7 +404,7 @@ const ChartComponent: React.FC = () => {
     AgCharts.create(options);
   }, []);
 
-  return <div id="myChart" style={{ width: "90dvw", height: "90dvh", background:"linear-gradient(to right, #d2a4e4, #8e5ddc)" }}></div>;
+  return <div id="myChart" style={{ width: "100dvw", height: "100dvh", background:"linear-gradient(to right, #d2a4e4, #8e5ddc)" }}></div>;
 };
 
 export default ChartComponent;
