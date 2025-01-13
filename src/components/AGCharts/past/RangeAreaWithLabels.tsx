@@ -318,6 +318,9 @@ const ChartComponent: React.FC = () => {
       title: {
         text: "House Price Index In London",
       },
+      background:{
+        fill:"transparent"
+      },
       subtitle: {
         text: "Price Indices of Flats and Terraced Houses from 2020 to 2023",
         spacing: 45,

@@ -416,6 +416,9 @@ const ChartComponent: React.FC = () => {
   useEffect(() => {
     const options = {
       container: document.getElementById("myChart"),
+      background:{
+        fill:"transparent"
+      },
       title: {
         text: "Social Media Market Share Over Time",
       },
@@ -508,7 +511,7 @@ const ChartComponent: React.FC = () => {
     AgCharts.create(options);
   }, []);
 
-  return <div id="myChart" style={{ width: "90dvw", height: "90dvh" }}></div>;
+  return <div id="myChart" style={{ width: "100dvw", height: "100dvh" }}></div>;
 };
 
 export default ChartComponent;

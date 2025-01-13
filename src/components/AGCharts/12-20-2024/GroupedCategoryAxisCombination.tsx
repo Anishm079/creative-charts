@@ -219,6 +219,7 @@ const ChartComponent: React.FC = () => {
       title: {
         text: "The Technology Industry",
         fontFamily: "Architects Daughter",
+        color:"#000"
       },
       padding: {
         left: 40,
@@ -237,6 +238,7 @@ const ChartComponent: React.FC = () => {
                   strokeWidth: 0,
                 },
                 label: {
+                  color:"#000",
                   fontFamily: "Architects Daughter",
                 },
               },
@@ -246,6 +248,7 @@ const ChartComponent: React.FC = () => {
                 groupPaddingInner: 0,
                 paddingInner: 0.4,
                 label: {
+                  color:"#000",
                   fontFamily: "Architects Daughter",
                 },
               },
@@ -263,6 +266,7 @@ const ChartComponent: React.FC = () => {
             series: {
               fillOpacity: 0.4,
               label: {
+                color:"#000",
                 fontFamily: "Architects Daughter",
               },
             },
@@ -274,6 +278,7 @@ const ChartComponent: React.FC = () => {
                 size: 10,
               },
               label: {
+                color:"#000",
                 fontFamily: "Architects Daughter",
               },
             },
@@ -288,6 +293,7 @@ const ChartComponent: React.FC = () => {
           yKey: "startups",
           yName: "Startups",
           label: {
+            color:"#000",
             fontFamily: "Architects Daughter",
           },
         },
@@ -298,6 +304,7 @@ const ChartComponent: React.FC = () => {
           yKey: "techCompanies",
           yName: "Tech Companies",
           label: {
+            color:"#000",
             fontFamily: "Architects Daughter",
           },
         },
@@ -309,6 +316,7 @@ const ChartComponent: React.FC = () => {
           yName: "Funding",
           fillOpacity: 1,
           label: {
+            color:"#000",
             fontFamily: "Architects Daughter",
           },
         },
@@ -320,6 +328,7 @@ const ChartComponent: React.FC = () => {
           yName: "Employees",
           fillOpacity: 1,
           label: {
+            color:"#000",
             fontFamily: "Architects Daughter",
           },
         },
@@ -330,6 +339,7 @@ const ChartComponent: React.FC = () => {
           yKey: "researchInstitutions",
           yName: "Research Institutions",
           label: {
+            color:"#000",
             fontFamily: "Architects Daughter",
           },
         },
@@ -340,6 +350,7 @@ const ChartComponent: React.FC = () => {
           yKey: "ventureCapitalFunds",
           yName: "Venture Capital Funds",
           label: {
+            color:"#000",
             fontFamily: "Architects Daughter",
           },
         },
@@ -350,6 +361,7 @@ const ChartComponent: React.FC = () => {
           yKey: "incubators",
           yName: "Incubators",
           label: {
+            color:"#000",
             fontFamily: "Architects Daughter",
           },
         },
@@ -360,6 +372,7 @@ const ChartComponent: React.FC = () => {
           yKey: "coWorkingSpaces",
           yName: "Co-working Spaces",
           label: {
+            color:"#000",
             fontFamily: "Architects Daughter",
           },
         },
@@ -370,6 +383,7 @@ const ChartComponent: React.FC = () => {
           yKey: "innovationHubs",
           yName: "Innovation Hubs",
           label: {
+            color:"#000",
             fontFamily: "Architects Daughter",
           },
         },
@@ -380,6 +394,7 @@ const ChartComponent: React.FC = () => {
           yKey: "accelerators",
           yName: "Accelerators",
           label: {
+            color:"#000",
             fontFamily: "Architects Daughter",
           },
         },
@@ -390,6 +405,7 @@ const ChartComponent: React.FC = () => {
           type: "number",
           keys: ["startups", "techCompanies"],
           label: {
+            color:"#000",
             fontFamily: "Architects Daughter",
           },
         },
@@ -398,6 +414,7 @@ const ChartComponent: React.FC = () => {
           type: "number",
           keys: ["employees"],
           label: {
+            color:"#000",
             fontFamily: "Architects Daughter",
           },
         },
@@ -406,6 +423,7 @@ const ChartComponent: React.FC = () => {
           type: "number",
           keys: ["funding"],
           title: {
+            color:"#000",
             text: "Number of Employees & Funding",
             fontFamily: "Architects Daughter",
           },
@@ -422,6 +440,7 @@ const ChartComponent: React.FC = () => {
             "innovationHubs",
           ],
           title: {
+            color:"#000",
             text: "Number of Institutions",
             fontFamily: "Architects Daughter",
           },
@@ -439,7 +458,7 @@ const ChartComponent: React.FC = () => {
     AgCharts.create(options);
   }, []);
 
-  return <div id="myChart" style={{ width: "90dvw", height: "90dvh", background:"linear-gradient(to right, #8d2de2, #4a00e0)" }}></div>;
+  return <div id="myChart" style={{ width: "100dvw", height: "100dvh", background:"linear-gradient(to right, #9b59d4, #785ab3)" }}></div>;
 };
 
 export default ChartComponent;
