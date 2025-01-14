@@ -35,6 +35,9 @@ const ChartComponent: React.FC = () => {
       title: {
         text: "Student Performance Over the Academic Year",
       },
+      background:{
+        fill: "transparent",
+      },
       subtitle: {
         text: "Comparison of Low and High Scores by Subject",
       },

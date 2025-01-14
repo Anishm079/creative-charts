@@ -542,6 +542,9 @@ const ChartComponent: React.FC = () => {
     const options = {
       container: document.getElementById("myChart"),
       data: getData(),
+      background:{
+        fill:"transparent"
+      },
       title: {
         text: `Understanding Japan's Seismic Hazard`,
       },
