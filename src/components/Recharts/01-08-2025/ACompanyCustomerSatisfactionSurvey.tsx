@@ -95,6 +95,12 @@ export default class ACompanyCustomerSatisfactionSurvey extends PureComponent<{}
                     fill="#8884d8"
                     dataKey="value"
                     onMouseEnter={this.onPieEnter}
+                    label={{
+                        fill: "#000000",
+                        fontSize: 20,
+                    }}
+                    fontSize={20}
+                    color='#000'
                 />
                 </PieChart>
             </ResponsiveContainer>
