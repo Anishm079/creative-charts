@@ -70,7 +70,7 @@ const CustomLabelLayer = ({ bars }) => {
       dominantBaseline="central"
       style={{
         fill: "#000000",
-        fontSize: 12,
+        fontSize: 24,
         fontWeight: "bold",
       }}
     >
@@ -92,6 +92,7 @@ const MyResponsiveRadialBar: React.FC = () => (
     labelsTextColor="#000000"
     labelsRadiusOffset={0.5}
     label={(d) => `${d.value}`}
+    labelComponent={<CustomLabelLayer />}
     legends={[
       {
         anchor: "right",

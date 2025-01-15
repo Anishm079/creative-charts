@@ -92,18 +92,60 @@ const MyResponsiveStream: React.FC = () => (
       tickSize: 5,
       tickPadding: 5,
       tickRotation: 0,
-      legend: "",
+      legend: "events",
+      legendPosition: "middle",
       legendOffset: 36,
       truncateTickAt: 0,
+      tickValues: 5,
+      tickTextColor: "#000000",
+      tickFontSize: 30, // Increased font size for axis labels
+      renderTick(props) {
+        const { value, x, y, textAnchor } = props;
+        return (
+          <g transform={`translate(${x},${y})`}>
+            <text
+              x={0}
+              y={0}
+              textAnchor={textAnchor}
+              dy={16}
+              fill="#000000"
+              fontSize={18} // Increased font size for axis labels
+            >
+              {value}
+            </text>
+          </g>
+        );
+      },
     }}
     axisLeft={{
       orient: "left",
       tickSize: 5,
       tickPadding: 5,
       tickRotation: 0,
-      legend: "",
+      legend: "performance score",
+      legendPosition: "middle",
       legendOffset: -40,
       truncateTickAt: 0,
+      tickValues: 5,
+      tickTextColor: "#000000",
+      tickFontSize: 14, // Increased font size for axis labels
+      renderTick(props) {
+        const { value, x, y, textAnchor } = props;
+        return (
+          <g transform={`translate(${x},${y})`}>
+            <text
+              x={0}
+              y={0}
+              textAnchor={textAnchor}
+              dy={16}
+              fill="#000000"
+              fontSize={18} // Increased font size for axis labels
+            >
+              {value}
+            </text>
+          </g>
+        );
+      },
     }}
     enableGridX={true}
     enableGridY={false}
@@ -160,7 +202,11 @@ const MyResponsiveStream: React.FC = () => (
         itemWidth: 80,
         itemHeight: 20,
         itemTextColor: "#000000",
-        symbolSize: 12,
+        itemOpacity:1,
+        symbolSize: 18,
+        itemText:{
+          fontSize:22
+        },
         symbolShape: "circle",
         effects: [
           {
@@ -172,6 +218,7 @@ const MyResponsiveStream: React.FC = () => (
         ],
       },
     ]}
+    
   />
 );
 
