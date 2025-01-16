@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from 'recharts';
+import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer, Legend } from 'recharts';
 
 type DataPoint = {
   subject: string;
@@ -21,13 +21,19 @@ export default class ASchoolIsAnalyzingThePerformanceOfTwoStudents extends PureC
 
   render() {
     return (
-      <ResponsiveContainer width="100%" height="100%">
+      <ResponsiveContainer width="100%" height="80%">
         <RadarChart cx="50%" cy="50%" outerRadius="80%" data={data} style={{color:'#000'}} >
-          <PolarGrid />
-          <PolarAngleAxis dataKey="subject" color='#000' />
-          <PolarRadiusAxis />
-          <Radar name="Student A" dataKey="A" stroke="#0d00ff" fill="#423ae1" fillOpacity={0.6} />
+          <PolarGrid color='#000' />
+          <PolarAngleAxis dataKey="subject" tick={{ fill: '#000' }} />
+          <PolarRadiusAxis tick={{ fill: '#000' }} />
+          <Radar name="Student A" dataKey="A"  stroke="#0d00ff" fill="#423ae1" fillOpacity={0.6} />
           <Radar name="Student B" dataKey="B" stroke="#00ff62" fill="#64f49b" fillOpacity={0.6} />
+          <Legend 
+            payload={[
+              { value: 'Student A', type: 'square', color: '#0d00ff' },
+              { value: 'Student B', type: 'square', color: '#00ff62' }
+            ]}
+          />
         </RadarChart>
       </ResponsiveContainer>
     );
