@@ -1,5 +1,22 @@
 [
-  {
-    temprature:"9.42 celsius",
-  }
+  { name: 'JavaScript', "developers(in k)": 1900 },
+  { name: 'Python', "developers(in k)": 1800 },
+  { name: 'Java', "developers(in k)": 1600 },
+  { name: 'C#', "developers(in k)": 1400 },
+  { name: 'PHP', "developers(in k)": 1200 },
+  { name: 'TypeScript', "developers(in k)": 1100 },
+  { name: 'C++', "developers(in k)": 1000 },
+  { name: 'Ruby', "developers(in k)": 850 },
+  { name: 'Swift', "developers(in k)": 800 },
+  { name: 'Kotlin', "developers(in k)": 750 },
+  { name: 'Rust', "developers(in k)": 700 },
+  { name: 'Go', "developers(in k)": 650 },
+  { name: 'Perl', "developers(in k)": 600 },
+  { name: 'Dart', "developers(in k)": 550 },
+  { name: 'R', "developers(in k)": 500 },
+  { name: 'Scala', "developers(in k)": 450 },
+  { name: 'Lua', "developers(in k)": 400 },
+  { name: 'Elixir', "developers(in k)": 350 },
+  { name: 'Haskell', "developers(in k)": 300 },
+  { name: 'Clojure', "developers(in k)": 250 },
 ]
