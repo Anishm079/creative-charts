@@ -1,38 +1,44 @@
 import { ResponsivePie } from "@nivo/pie";
+import React from "react";
 
-const data = [
+interface PieDatum {
+  id: string;
+  value: number;
+  [key: string]: any;
+}
+
+const data: PieDatum[] = [
   {
-    "id": "roses",
-    "label": "Roses",
-    "value": 250,
-    "color": "hsl(340, 70%, 50%)"
+    id: "solar",
+    label: "Solar",
+    value: 320,
+    color: "hsl(50, 70%, 50%)",
   },
   {
-    "id": "tulips",
-    "label": "Tulips",
-    "value": 220,
-    "color": "hsl(30, 70%, 50%)"
+    id: "wind",
+    label: "Wind",
+    value: 450,
+    color: "hsl(180, 70%, 50%)",
   },
   {
-    "id": "orchids",
-    "label": "Orchids",
-    "value": 180,
-    "color": "hsl(120, 70%, 50%)"
+    id: "hydro",
+    label: "Hydro",
+    value: 610,
+    color: "hsl(220, 70%, 50%)",
   },
   {
-    "id": "succulents",
-    "label": "Succulents",
-    "value": 300,
-    "color": "hsl(210, 70%, 50%)"
+    id: "geothermal",
+    label: "Geothermal",
+    value: 140,
+    color: "hsl(310, 70%, 50%)",
   },
   {
-    "id": "ferns",
-    "label": "Ferns",
-    "value": 140,
-    "color": "hsl(80, 70%, 50%)"
-  }
+    id: "biomass",
+    label: "Biomass",
+    value: 280,
+    color: "hsl(100, 70%, 50%)",
+  },
 ];
-
 const MyResponsivePie: React.FC = () => (
   <ResponsivePie
     data={data}
@@ -47,11 +53,16 @@ const MyResponsivePie: React.FC = () => (
       modifiers: [["darker", 0.2]],
     }}
     arcLinkLabelsSkipAngle={10}
-    arcLinkLabelsTextColor="#ffffff" // Changed to white
-    arcLinkLabelsThickness={2}
+    arcLinkLabelsTextColor="#ffffff"
+    arcLinkLabelsThickness={6}
     arcLinkLabelsColor={{ from: "color" }}
+    arcLinkLabelsTextOffset={10}
+    arcLinkLabelsTextSize={24} // Increase font size
+    arcLinkLabelsTextWeight={600}
     arcLabelsSkipAngle={10}
-    arcLabelsTextColor="#ffffff" // Changed to white
+    arcLabelsTextColor="#ffffff"
+    arcLabelsTextSize={20} // Increase font size
+    arcLabelsTextWeight={600}
     defs={[
       {
         id: "dots",
@@ -73,35 +84,75 @@ const MyResponsivePie: React.FC = () => (
       },
     ]}
     fill={[
-      { match: { id: "ruby" }, id: "dots" },
-      { match: { id: "c" }, id: "dots" },
-      { match: { id: "go" }, id: "dots" },
-      { match: { id: "python" }, id: "dots" },
-      { match: { id: "scala" }, id: "lines" },
-      { match: { id: "lisp" }, id: "lines" },
-      { match: { id: "elixir" }, id: "lines" },
-      { match: { id: "javascript" }, id: "lines" },
+      {
+        match: {
+          id: "ruby",
+        },
+        id: "dots",
+      },
+      {
+        match: {
+          id: "c",
+        },
+        id: "dots",
+      },
+      {
+        match: {
+          id: "go",
+        },
+        id: "dots",
+      },
+      {
+        match: {
+          id: "python",
+        },
+        id: "dots",
+      },
+      {
+        match: {
+          id: "scala",
+        },
+        id: "lines",
+      },
+      {
+        match: {
+          id: "lisp",
+        },
+        id: "lines",
+      },
+      {
+        match: {
+          id: "elixir",
+        },
+        id: "lines",
+      },
+      {
+        match: {
+          id: "javascript",
+        },
+        id: "lines",
+      },
     ]}
     legends={[
       {
-        anchor: "bottom",
-        direction: "row",
+        anchor: "bottom" as const,
+        direction: "row" as const,
         justify: false,
         translateX: 0,
         translateY: 56,
         itemsSpacing: 0,
-        itemWidth: 100,
-        itemHeight: 18,
-        itemTextColor: "#ffffff", // Changed to white
-        itemDirection: "left-to-right",
+        itemWidth: 140, // Increase item width
+        itemHeight: 24, // Increase item height
+        itemTextColor: "#ffffff",
+        itemDirection: "left-to-right" as const,
         itemOpacity: 1,
         symbolSize: 18,
-        symbolShape: "circle",
+        symbolShape: "circle" as const,
         effects: [
           {
             on: "hover",
             style: {
-              itemTextColor: "#ffffff", // Changed to white
+              itemTextColor: "#ffffff",
             },
           },
         ],
